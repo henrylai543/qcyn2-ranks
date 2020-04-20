@@ -144,12 +144,11 @@ function showChart(key, asc) {
         .html(function(d) {
             var letter = '<div class="letter" style="background: ' + getBackground(d) + '; color: ' + getTextColor(d) + '">' + d.letter + '</div>';
             var letter2 = '<div class="letter2" style="background: ' + getBackground2(d) + '; color: ' + getTextColor2(d) + '">' + d.letter2 + '</div>';
-            var letter3 = '<div class="letter3" style="background: ' + getBackground3(d) + '; color: ' + getTextColor3(d) + '">' + d.letter3 + '</div>';
             var rank = d.latestRank;
             if (rank == "-") {
                 rank = "-";
             }
-            return td(rank, "smWidth") + td(d.name, "nameWidth") + td(d.company, "companyWidth") + td(letter, "smWidth") + td(letter2, "smWidth") + td(letter3, "smWidth") + td(displayRankChange(d), "rankWidth");
+            return td(rank, "smWidth") + td(d.name, "nameWidth") + td(d.company, "companyWidth") + td(letter, "smWidth") + td(letter2, "smWidth") + td(displayRankChange(d), "rankWidth");
         })
         .on("mouseover", function(d) {
             selectLine(d, "#line" + d.name.replace(/\s/g, ''));
@@ -190,9 +189,6 @@ function getBackground2(d) {
     return colors[d.letter2];
 }
 
-function getBackground3(d) {
-    return colors[d.letter3];
-}
 
 function resetLines() {
     plot.selectAll("path.ranking")
@@ -263,9 +259,9 @@ function plotData(data) {
             return pathGenerator(d.ranking);
         })
         .style("stroke", function(d, i) {
-            let color = getBackground3(d)
+            let color = getBackground2(d)
             if (!color) {
-                color = getBackground2(d)
+                color = getBackground(d)
                 return color;
             }
             return color;
@@ -349,9 +345,9 @@ function updateNotes(d) {
             $("#note" + i).hide();
         } else { // Show rank
             var rank = d.ranking[i].rank;
-            let color = getBackground3(d)
+            let color = getBackground2(d)
             if (!color) {
-                color = getBackground2(d)
+                color = getBackground(d)
             }
             $("#note" + i)
                 .text(rank)
@@ -399,7 +395,6 @@ function parseLine(row) {
     r.company = row.Company;
     r.letter = row["Level Audition"];
     r.letter2 = row["Re-Evaluation"];
-    r.letter3 = row["2nd Re-Evaluation"];
     r.specialNote = row.note;
     r.ranking = [];
     episodes.forEach(function(episode, i) {
