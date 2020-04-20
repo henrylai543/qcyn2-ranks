@@ -169,10 +169,10 @@ function displayProfile(d) {
         .text(d.letter)
         .css("background", getBackground(d))
         .css("color", getTextColor(d));
-    $("#infoLetter3")
-        .text(d.letter3)
-        .css("background", getBackground3(d))
-        .css("color", getTextColor3(d));
+    $("#infoLetter2")
+        .text(d.letter2)
+        .css("background", getBackground2(d))
+        .css("color", getTextColor2(d));
     $("#infoCompany").text(d.company);
     $("#infoRank").html(getRankInfo(d));
 }
@@ -373,12 +373,6 @@ function getTextColor2(d) {
     return "white";
 }
 
-function getTextColor3(d) {
-    // if (d.letter2 == "C") {
-    //     return "black";
-    // }
-    return "white";
-}
 
 // Return rank or -1 if no rank (eliminated)
 function getRank(n) {
