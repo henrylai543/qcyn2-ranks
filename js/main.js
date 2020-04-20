@@ -170,10 +170,6 @@ function displayProfile(d) {
         .text(d.letter)
         .css("background", getBackground(d))
         .css("color", getTextColor(d));
-    $("#infoLetter2")
-        .text(d.letter2)
-        .css("background", getBackground2(d))
-        .css("color", getTextColor2(d));
     $("#infoLetter3")
         .text(d.letter3)
         .css("background", getBackground3(d))
