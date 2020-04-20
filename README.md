@@ -1,2 +1,2 @@
-# ywy2-ranking
-qcyn2 ranks
+# qcyn2-ranking
+ranks updated to episode 12
