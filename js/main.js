@@ -11,7 +11,7 @@ var CUTOFF = 9; // Update cutoff
 var height = 390;
 var padding = 40;
 var middlePadding = (padding * 2) + 100;
-var width = $(window).width() - middlePadding - CHART_WIDTH - 100;
+var width = $(window).width() - middlePadding - CHART_WIDTH - 30;
 
 var episodes = [2,4,6,9,12];
 var totalData;
