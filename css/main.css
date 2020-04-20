@@ -189,7 +189,7 @@ path.ranking {
     #top th:hover {
       color: black; }
   #top #latestRank, #top #letter, #top #rankChange, #top .smWidth {
-    width: 30px; }
+    width: 17px; }
   #top #rankChange, #top .rankWidth {
     width: 50px; }
   #top #name, #top .nameWidth {
