@@ -360,10 +360,10 @@ function updateNotes(d) {
 
 // Get color of note text (all white except for yellow rank C)
 function getTextColor(d) {
-     if (d.letter2 == "C") {
-         return "black";
-     }
-    return "white";
+  //   if (d.letter2 == "C") {
+  //       return "black";
+  //   }
+  //  return "white";
 }
 
 function getTextColor2(d) {
