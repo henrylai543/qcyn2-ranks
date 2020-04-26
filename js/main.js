@@ -281,11 +281,11 @@ function plotData(data) {
     paths.exit().remove();
 }
 
-// Returns the latest rank for every contestant, 109 for those never ranked
+// Returns the latest rank for every contestant, 1000 for those never ranked
 function getLatestRank(d) {
     var ranking = d.ranking[d.ranking.length - 1]
     if (ranking == undefined) {
-        return 109;
+        return "-";
     }
     if (d.ranking.length < episodes.length) {
         console.log(d)
