@@ -364,13 +364,15 @@ function getTextColor(d) {
   //       return "black";
   //   }
   //  return "white";
+      return "black";
 }
 
 function getTextColor2(d) {
-     if (d.letter2 == "C") {
-         return "black";
-     }
-    return "white";
+  //   if (d.letter2 == "C") {
+  //       return "black";
+  //   }
+  //  return "white";
+      return "black";
 }
 
 
