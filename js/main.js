@@ -43,7 +43,7 @@ setXAxis();
 d3.csv("trainees.csv", parseLine, function (err, data) {
     totalData = processData(data);
     plotData(data);
-    selectLine(dFirst, "#lineEstherYuShuxin");
+    selectLine(dFirst, "#line1");
     showChart("latestRank", true);
 });
 
@@ -287,10 +287,10 @@ function getLatestRank(d) {
     if (ranking == undefined) {
         return 109;
     }
-//    if (d.ranking.length < episodes.length) {
-//        console.log(d)
-//        return "-"
-//    }
+    if (d.ranking.length < episodes.length) {
+        console.log(d)
+        return "-"
+    }
     return ranking.rank;
 }
 
@@ -330,7 +330,7 @@ function getRankInfo(d) {
         return "Withdrew";
     }
     if (d.isEliminated) {
-        //return "Eliminated in Episode " + episodes[d.ranking.length - 1];
+        return "Eliminated in Episode " + episodes[d.ranking.length - 1];
         return;
     }
     return d.currentRank + " " + displayRankChange(d);
