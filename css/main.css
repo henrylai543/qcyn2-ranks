@@ -136,6 +136,16 @@ path.ranking {
       top: -3px; }
     #profile #textWrapper #infoCompany {
       margin: 5px 0 8px; }
+    #profile #textWrapper #infoPerf1 {
+      margin: 5px 0 8px; }
+    #profile #textWrapper #infoPerf2 {
+      margin: 5px 0 8px; }    
+    #profile #textWrapper #infoPerf3 {
+      margin: 5px 0 8px; }    
+    #profile #textWrapper #infoPerf4 {
+      margin: 5px 0 8px; }    
+    #profile #textWrapper #infoPerf5 {
+      margin: 5px 0 8px; }    
 
 .pie .arc text {
   text-anchor: middle;
