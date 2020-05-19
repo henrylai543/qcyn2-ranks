@@ -174,6 +174,11 @@ function displayProfile(d) {
         .css("background", getBackground2(d))
         .css("color", getTextColor2(d));
     $("#infoCompany").text(d.company);
+    $("#infoPerf1").text(d.perf1);
+	$("#infoPerf2").text(d.perf2);
+	$("#infoPerf3").text(d.perf3);
+	$("#infoPerf4").text(d.perf4);
+	$("#infoPerf5").text(d.perf5);
     $("#infoRank").html(getRankInfo(d));
 }
 
@@ -391,6 +396,11 @@ function parseLine(row) {
     r.company = row.Company;
     r.letter = row["Level Audition"];
     r.letter2 = row["Re-Evaluation"];
+    r.perf1 = row["Position Evaluation"];
+	r.perf2 = row["Group Battle"];
+	r.perf3 = row["Practice Room Battle"];
+	r.perf4 = row["Theme Evaluation"];
+	r.perf5 = row["Collaboration Stage"];
     r.specialNote = row.note;
     r.ranking = [];
     episodes.forEach(function(episode, i) {
